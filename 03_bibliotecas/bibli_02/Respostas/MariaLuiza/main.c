@@ -14,7 +14,7 @@ int main()
     while (opcao != 6)
     {
         printf("1 - Somar matrizes \n2 - Subtrair matrizes\n3 - Multiplicar matrizes\n4 - Multiplicacao de uma matriz por escalar\n5 - Transposta de uma matriz\n6 - Encerrar o programa\n");
-        printf("Opcao escolhida:\n");
+        printf("Opcao escolhida: \n");
         scanf("%d", &opcao);
 
         if (opcao == 1 && possible_matrix_sum(rows1, cols1, rows2, cols2) == 1)
@@ -35,9 +35,13 @@ int main()
             matrix_multiply(rows1, cols1, matrix1, rows2, cols2, matrix2, result);
             matrix_print(rows1, cols2, result);
         }
-        else if ((opcao == 3 && possible_matrix_multiply(cols1, rows2) == 0) || (opcao == 1 && possible_matrix_sum(rows1, cols1, rows2, cols2) == 0) || (opcao == 2 && possible_matrix_sub(rows1, cols1, rows2, cols2) == 0))
+        else if (opcao == 3 && possible_matrix_multiply(cols1, rows2) == 0)
         {
-            printf("Erro: as dimensoes da matriz nao correspondem\n");
+            printf("Erro: o numero de colunas da primeira matriz eh diferente do numero de linhas da segunda matriz\n\n");
+        }
+        else if ((opcao == 1 && possible_matrix_sum(rows1, cols1, rows2, cols2) == 0) || (opcao == 2 && possible_matrix_sub(rows1, cols1, rows2, cols2) == 0))
+        {
+            printf("Erro: as dimensoes da matriz nao correspondem\n\n");
         }
         else if (opcao == 4)
         {
