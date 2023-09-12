@@ -9,24 +9,24 @@ int main()
     if (verificaDataValida(dia1, mes1, ano1) == 1 && (verificaDataValida(dia2, mes2, ano2) == 1))
     {
         diferenca = calculaDiferencaDias(dia1, mes1, ano1, dia2, mes2, ano2);
-        printf("Primeira data:");
+        printf("Primeira data: ");
         imprimeDataExtenso(dia1, mes1, ano1);
-        printf("\nSegunda data:");
+        printf("Segunda data: ");
         imprimeDataExtenso(dia2, mes2, ano2);
         if (comparaData(dia1, mes1, ano1, dia2, mes2, ano2) == 0)
         {
 
-            printf("\nAs datas sao iguais");
+            printf("As datas sao iguais\n");
         }
         else if (comparaData(dia1, mes1, ano1, dia2, mes2, ano2) == -1)
         {
-            printf("\nA primeira data eh mais antiga\n");
+            printf("A primeira data eh mais antiga\n");
         }
         else
         {
-            printf("\nA segunda data eh mais antiga\n");
+            printf("A segunda data eh mais antiga\n");
         }
-        printf("A diferenca em dias entre as datas eh: %02d", diferenca);
+        printf("A diferenca em dias entre as datas eh: %02d dias\n", diferenca);
     }
     else
     {
