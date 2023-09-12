@@ -71,9 +71,9 @@ void imprimeMesExtenso(int mes)
  */
 void imprimeDataExtenso(int dia, int mes, int ano)
 {
-    printf("%d de", dia);
+    printf("%02d de ", dia);
     imprimeMesExtenso(mes);
-    printf(" de %d", ano);
+    printf(" de %d\n", ano);
 }
 
 int verificaBissexto(int ano)
