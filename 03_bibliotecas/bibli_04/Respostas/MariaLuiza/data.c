@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "data.h"
 
-int numeroDiasMes(int mes, int ano);
 int verificaDataValida(int dia, int mes, int ano)
 {
     int max_dias = 0;
@@ -19,6 +18,11 @@ int verificaDataValida(int dia, int mes, int ano)
         else
             return 0;
     }
+}
+
+void imprimeData(int dia, int mes, int ano)
+{
+    printf("%02d/%02d/%04d\n", dia, mes, ano);
 }
 void imprimeMesExtenso(int mes)
 {
@@ -69,15 +73,12 @@ void imprimeMesExtenso(int mes)
  * @param mes Mês da data.
  * @param ano Ano da data.
  */
-void imprimeData(int dia, int mes, int ano)
-{
-    printf("%02d/%02d/%04d\n", dia, mes, ano);
-}
+
 void imprimeDataExtenso(int dia, int mes, int ano)
 {
     printf("%d de ", dia);
     imprimeMesExtenso(mes);
-    printf(" de %d", ano);
+    printf(" de %d\n", ano);
 }
 
 int verificaBissexto(int ano)
@@ -167,18 +168,9 @@ int comparaData(int dia1, int mes1, int ano1, int dia2, int mes2, int ano2)
  * @param ano Ano da data.
  * @return int Retorna o número de dias até o mês.
  */
-int calculaDiasAteMes(int mes, int ano);
-/**
- * @brief Calcula a diferença em dias entre duas datas.
- *
- * @param dia1 Dia da primeira data.
- * @param mes1 Mês da primeira data.
- * @param ano1 Ano da primeira data.
- * @param dia2 Dia da segunda data.
- * @param mes2 Mês da segunda data.
- * @param ano2 Ano da segunda data.
- * @return int Retorna o número de dias de diferença entre as datas.
- */
+int calculaDiasAteMes(int mes, int ano){
+    return numeroDiasMes(mes, ano);}
+
 int calculaDiferencaDias(int dia1, int mes1, int ano1, int dia2, int mes2, int ano2)
 {
     int dias_restantes = 0, primeiro_ano, primeiro_mes, primeiro_dia, segundo_ano, segundo_mes, segundo_dia, bissexto, i = 0;
