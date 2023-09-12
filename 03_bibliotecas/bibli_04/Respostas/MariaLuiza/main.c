@@ -8,9 +8,9 @@ int main()
     if (verificaDataValida(dia1, mes1, ano1) == 1)
     {
 
-        printf("Data informada:");
+        printf("Data informada: ");
         imprimeDataExtenso(dia1, mes1, ano1);
-        printf("\n");
+       
         if (verificaBissexto(ano1) == 0)
         {
             printf("O ano informado nao eh bissexto\n");
@@ -25,7 +25,8 @@ int main()
     }
     else
     {
-        printf("A data informada e invalida(s)\n");
+        printf("A data informada eh invalida\n");
     }
     return 0;
 }
+
