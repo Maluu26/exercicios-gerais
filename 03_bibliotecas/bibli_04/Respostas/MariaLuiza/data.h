@@ -1,9 +1,3 @@
-**
- * @file data.h
- * @brief Biblioteca para manipulação de datas.
- *
- * Esta biblioteca contém funções para manipulação de datas, como verificação de datas válidas, impressão de datas e cálculo de diferença entre datas.
- */
 
 #ifndef _data
 #define _data
