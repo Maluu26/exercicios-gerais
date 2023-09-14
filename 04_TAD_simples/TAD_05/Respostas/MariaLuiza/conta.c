@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include "conta.h"
+#include "usuario.h"
+
+/**
+ * @struct tConta
+ * @brief Estrutura que representa uma conta bancária.
+ */
+/**
+ * @brief Cria uma nova conta bancária.
+ * @param numero Número da conta.
+ * @param user Usuário da conta.
+ * @return A nova conta criada.
+ */
+tConta criar_conta(int numero, tUsuario user)
+{
+    tConta banco;
+    banco.numero = numero;
+    banco.user = user;
+    banco.saldo = 0;
+    return banco;
+}
+
+/**
+ * @brief Imprime os dados de uma conta bancária.
+ * @param conta Conta bancária a ser impressa.
+ */
+void imprime_conta(tConta conta)
+{
+    printf("Conta: %d\n Saldo: R$ %.2f\n", conta.numero, conta.saldo);
+    imprime_usuario(conta.user);
+}
+
+/**
+ * @brief Compara o número de uma conta bancária com um número dado.
+ * @param conta Conta bancária a ser comparada.
+ * @param numero Número a ser comparado.
+ * @return 1 se os números forem iguais, 0 caso contrário.
+ */
+int comparar_numero_conta(tConta conta, int numero)
+{
+    if (conta.numero == numero)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+/**
+ * @brief Realiza um saque em uma conta bancária.
+ * @param conta Conta bancária a ser sacada.
+ * @param valor Valor a ser sacado.
+ * @return A conta com o novo saldo após o saque.
+ */
+tConta saque(tConta conta, float valor)
+{
+    conta.saldo -= valor;
+    return conta;
+}
+
+/**
+ * @brief Realiza um depósito em uma conta bancária.
+ * @param conta Conta bancária a ser depositada.
+ * @param valor Valor a ser depositado.
+ * @return A conta com o novo saldo após o depósito.
+ */
+tConta deposito(tConta conta, float valor)
+{
+    conta.saldo += valor;
+    return conta;
+}
