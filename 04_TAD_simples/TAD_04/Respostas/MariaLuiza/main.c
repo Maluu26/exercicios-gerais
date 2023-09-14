@@ -3,22 +3,20 @@
 
 int main()
 {
-    int num_alunos = 0, i = 0, j;
-    char nome[50];
-    int matricula = 0, n1 = 0, n2 = 0, n3 = 0;
+    int num_alunos = 0, i = 0, j, k=0;
+   
     scanf("%d", &num_alunos);
     tAluno aluno[num_alunos], aux;
     for (i = 0; i < num_alunos; i++)
     {
-        scanf("%s %d %d %d %d", nome, &matricula, &n1, &n2, &n3);
-        aluno[i] = criar_aluno(nome, &matricula, &n1, &n2, &n3);
+        aluno[i] = LeAluno();
     }
 
-    for (i = 0; i < num_alunos; i++)
+    for (i = 0; i < num_alunos - 1; i++)
     {
         for (j = i; j < num_alunos; j++)
         {
-            if (comparar_matricula_aluno(aluno[i], aluno[j]) == 1)
+            if (ComparaMatricula(aluno[i], aluno[j]) == 1)
             {
                 aux = aluno[i];
                 aluno[i] = aluno[j];
@@ -28,9 +26,9 @@ int main()
     }
     for (i = 0; i < num_alunos; i++)
     {
-        if (aluno_aprovado(aluno[i]) == 1)
+        if (VerificaAprovacao(aluno[i]) == 1)
         {
-            imprimir_aluno(aluno[i]);
+            ImprimeAluno(aluno[i]);
         }
     }
 }
