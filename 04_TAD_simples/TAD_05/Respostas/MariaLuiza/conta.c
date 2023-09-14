@@ -12,7 +12,7 @@
  * @param user Usuário da conta.
  * @return A nova conta criada.
  */
-tConta criar_conta(int numero, tUsuario user)
+tConta CriaConta(int numero, tUsuario user)
 {
     tConta banco;
     banco.numero = numero;
@@ -25,10 +25,10 @@ tConta criar_conta(int numero, tUsuario user)
  * @brief Imprime os dados de uma conta bancária.
  * @param conta Conta bancária a ser impressa.
  */
-void imprime_conta(tConta conta)
+void ImprimeConta(tConta conta)
 {
     printf("Conta: %d\n Saldo: R$ %.2f\n", conta.numero, conta.saldo);
-    imprime_usuario(conta.user);
+    ImprimeUsuario(conta.user);
 }
 
 /**
@@ -37,7 +37,7 @@ void imprime_conta(tConta conta)
  * @param numero Número a ser comparado.
  * @return 1 se os números forem iguais, 0 caso contrário.
  */
-int comparar_numero_conta(tConta conta, int numero)
+int VerificaConta(tConta conta, int numero)
 {
     if (conta.numero == numero)
     {
@@ -55,7 +55,7 @@ int comparar_numero_conta(tConta conta, int numero)
  * @param valor Valor a ser sacado.
  * @return A conta com o novo saldo após o saque.
  */
-tConta saque(tConta conta, float valor)
+tConta SaqueConta(tConta conta, float valor)
 {
     conta.saldo -= valor;
     return conta;
@@ -67,7 +67,7 @@ tConta saque(tConta conta, float valor)
  * @param valor Valor a ser depositado.
  * @return A conta com o novo saldo após o depósito.
  */
-tConta deposito(tConta conta, float valor)
+tConta DepositoConta(tConta conta, float valor)
 {
     conta.saldo += valor;
     return conta;

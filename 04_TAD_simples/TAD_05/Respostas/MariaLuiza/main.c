@@ -16,8 +16,8 @@ int main()
         {
             scanf("%s %s", nome, cpf);
             scanf("%d", &num_conta);
-            user = criar_usuario(nome, cpf);
-            contas[i] = criar_conta(num_conta, user);
+            user = CriaUsuario(nome, cpf);
+            contas[i] = CriaConta(num_conta, user);
             i++;
         }
         else if (opcao == 1 || opcao == 2)
@@ -25,12 +25,12 @@ int main()
             scanf("%d %f", &conta_selecionada, &valor);
             for (j = 0; j < i; j++)
             {
-                if (comparar_numero_conta(contas[j], conta_selecionada) == 1)
+                if (VerificaConta(contas[j], conta_selecionada) == 1)
                 {
                     if (opcao == 1)
-                        saque(contas[j], valor);
+                        contas[j]=SaqueConta(contas[j], valor);
                     else
-                        deposito(contas[j], valor);
+                        contas[j]= DepositoConta(contas[j], valor);
                 }
             }
         }
@@ -39,7 +39,7 @@ int main()
             printf("===| Imprimindo Relatorio |===\n");
             for (j = 0; j < i; j++)
             {
-                imprime_conta(contas[j]);
+                ImprimeConta(contas[j]);
             }
         }
         else
