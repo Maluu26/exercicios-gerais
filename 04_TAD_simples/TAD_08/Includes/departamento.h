@@ -8,6 +8,7 @@ typedef struct Departamento {
     char c1[STRING_MAX], c2[STRING_MAX], c3[STRING_MAX];    // nomes dos cursos do departamento
     int m1, m2, m3;     // médias de notas dos cursos do departamento
     char diretor [STRING_MAX];    // nome do diretor do departamento
+    float media_geral;
 } tDepartamento;
 
 /**
@@ -55,5 +56,13 @@ double calculaDesvioPadraoDepartamento(tDepartamento depto);
  * @return double Valor do calculo da média simples.
  */
 double calculaMediaGeralDepartamento(tDepartamento depto);
+
+/**
+ * @brief Ordena o vetor de departamentos em ordem decrescente de acordo com as médias dos departamentos.
+ * 
+ * @param deptos Vetor de departamentos a ser ordenado.
+ * @param tamanho Tamanho do vetor a ser ordenado.
+ */
+void ordenaPorMediaDepartamentos(tDepartamento d[], int tamanho);
 
 #endif
