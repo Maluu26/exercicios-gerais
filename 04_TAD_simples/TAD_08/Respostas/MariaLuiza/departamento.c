@@ -98,7 +98,6 @@ void ordenaPorMediaDepartamentos(tDepartamento d[], int tamanho)
         {
             if (d[i].media_geral < d[j].media_geral)
             {
-
                 aux = d[i];
                 d[i] = d[j];
                 d[j] = aux;
