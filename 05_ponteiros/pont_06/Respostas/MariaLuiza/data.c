@@ -20,17 +20,16 @@ void InicializaDataParam(int dia, int mes, int ano, tData *data)
     if (mes > 12)
     {
         mes = 12;
-    }
-
-    max_dias = InformaQtdDiasNoMes(&data);
-    if (max_dias >= (*data).dia)
-    {
-        dia = max_dias;
-    }
+    }  
 
     (*data).dia = dia;
     (*data).mes = mes;
     (*data).ano = ano;
+    max_dias = InformaQtdDiasNoMes(data);
+    if (max_dias < (*data).dia)
+    {
+        (*data).dia = max_dias;
+    }
 }
 
 /**
