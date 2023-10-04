@@ -12,7 +12,6 @@ tPessoa CriaPessoa()
     tPessoa pessoa;
     pessoa.pai = NULL;
     pessoa.mae = NULL;
-    LePessoa(&pessoa);
     return pessoa;
 }
 
@@ -24,9 +23,11 @@ tPessoa CriaPessoa()
 void LePessoa(tPessoa *pessoa)
 {
     char nome[100];
+    *pessoa = CriaPessoa(); 
     scanf("%*c");
     scanf("%[^\n]", nome);
     strcpy((*pessoa).nome, nome);
+    
 }
 
 /**
@@ -39,14 +40,7 @@ void ImprimePessoa(tPessoa *pessoa)
     if ((*pessoa).mae != NULL || (*pessoa).pai != NULL)
     {
         printf("NOME COMPLETO: %s\n", (*pessoa).nome);
-        if ((*pessoa).mae == NULL)
-        {
-            printf("MAE: NAO INFORMADO\n");
-        }
-        else
-        {
-            printf("MAE: %s\n", (*pessoa).mae);
-        }
+        
         if ((*pessoa).pai == NULL)
         {
             printf("PAI: NAO INFORMADO\n");
@@ -54,6 +48,14 @@ void ImprimePessoa(tPessoa *pessoa)
         else
         {
             printf("PAI: %s\n", (*pessoa).pai);
+        }
+        if ((*pessoa).mae == NULL)
+        {
+            printf("MAE: NAO INFORMADO\n\n");
+        }
+        else
+        {
+            printf("MAE: %s\n\n", (*pessoa).mae);
         }
     }
 }
@@ -78,5 +80,4 @@ void AssociaFamiliasGruposPessoas(tPessoa *pessoas)
     {
         pessoas[ind_filho].mae = &pessoas[ind_mae].nome;
     }
-    ImprimePessoa(&pessoas[ind_filho]);
 }

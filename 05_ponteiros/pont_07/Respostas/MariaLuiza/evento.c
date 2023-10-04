@@ -38,8 +38,8 @@ void exibirEventos(Evento *eventos, int *numEventos)
 void trocarDataEvento(Evento *eventos, int *numEventos)
 {
     int indice;
-    int *ind;
-    scanf("%d", ind);
+    scanf("%d", &indice);
+    int *ind = &indice;
     scanf("Eventos cadastrados:\n%d %d %d", &eventos[*ind].dia, &eventos[*ind].mes, &eventos[*ind].ano);
 }
 
