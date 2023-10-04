@@ -25,8 +25,8 @@ void LePessoa(tPessoa *pessoa)
     char nome[100];
     *pessoa = CriaPessoa(); 
     scanf("%*c");
-    scanf("%[^\n]", nome);
-    strcpy((*pessoa).nome, nome);
+    scanf("%[^\n]",pessoa->nome);
+   
     
 }
 
@@ -74,10 +74,10 @@ void AssociaFamiliasGruposPessoas(tPessoa *pessoas)
 
     if (ind_pai != -1)
     {
-        pessoas[ind_filho].pai = &pessoas[ind_pai].nome;
+        pessoas[ind_filho].pai = &pessoas[ind_pai];
     }
     if (ind_mae != -1)
     {
-        pessoas[ind_filho].mae = &pessoas[ind_mae].nome;
+        pessoas[ind_filho].mae = &pessoas[ind_mae];
     }
 }
