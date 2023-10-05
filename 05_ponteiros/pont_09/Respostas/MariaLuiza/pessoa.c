@@ -23,7 +23,6 @@ tPessoa CriaPessoa()
 void LePessoa(tPessoa *pessoa)
 {
     char nome[100];
-    *pessoa = CriaPessoa();
     scanf("%*c");
     scanf("%[^\n]", pessoa->nome);
 }
@@ -45,7 +44,7 @@ void ImprimePessoa(tPessoa *pessoa)
         }
         else
         {
-            printf("PAI: %s\n", (pessoa->pai));
+            printf("PAI: %s\n", pessoa->pai->nome);
         }
         if ((*pessoa).mae == NULL)
         {
@@ -53,7 +52,7 @@ void ImprimePessoa(tPessoa *pessoa)
         }
         else
         {
-            printf("MAE: %s\n\n", (*pessoa->mae));
+            printf("MAE: %s\n\n", pessoa->mae->nome);
         }
     }
 }
@@ -65,7 +64,12 @@ void ImprimePessoa(tPessoa *pessoa)
  * @param pessoas Ponteiro para a lista de pessoas a serem associadas.
  */
 void AssociaFamiliasGruposPessoas(tPessoa *pessoas)
-{
+
+{   int associados = 0;
+    scanf("%d", &associados);
+    for (int i = 0; i < associados; i++)
+    {
+    
     int ind_filho, ind_pai, ind_mae;
     scanf("%*c");
     scanf("mae: %d, pai: %d, filho: %d", &ind_mae, &ind_pai, &ind_filho);
@@ -77,5 +81,6 @@ void AssociaFamiliasGruposPessoas(tPessoa *pessoas)
     if (ind_mae != -1)
     {
         pessoas[ind_filho].mae = &pessoas[ind_mae];
+    }
     }
 }

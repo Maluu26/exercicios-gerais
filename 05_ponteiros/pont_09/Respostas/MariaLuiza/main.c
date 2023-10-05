@@ -8,15 +8,12 @@ int main()
     tPessoa pessoas[quant_pessoas];
     for (int i = 0; i < quant_pessoas; i++)
     {
-
+       pessoas[i] = CriaPessoa();
        LePessoa(&pessoas[i]);
     }
 
-    scanf("%d", &associados);
-    for (int i = 0; i < associados; i++)
-    {
-        AssociaFamiliasGruposPessoas(pessoas);
-    }
+
+    AssociaFamiliasGruposPessoas(pessoas);
      for(int i = 0;i<quant_pessoas;i++){
         ImprimePessoa(&pessoas[i]);
     }
