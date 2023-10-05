@@ -23,11 +23,9 @@ tPessoa CriaPessoa()
 void LePessoa(tPessoa *pessoa)
 {
     char nome[100];
-    *pessoa = CriaPessoa(); 
+    *pessoa = CriaPessoa();
     scanf("%*c");
-    scanf("%[^\n]",pessoa->nome);
-   
-    
+    scanf("%[^\n]", pessoa->nome);
 }
 
 /**
@@ -40,14 +38,14 @@ void ImprimePessoa(tPessoa *pessoa)
     if ((*pessoa).mae != NULL || (*pessoa).pai != NULL)
     {
         printf("NOME COMPLETO: %s\n", (*pessoa).nome);
-        
+
         if ((*pessoa).pai == NULL)
         {
             printf("PAI: NAO INFORMADO\n");
         }
         else
         {
-            printf("PAI: %s\n", (*pessoa).pai);
+            printf("PAI: %s\n", (pessoa->pai));
         }
         if ((*pessoa).mae == NULL)
         {
@@ -55,7 +53,7 @@ void ImprimePessoa(tPessoa *pessoa)
         }
         else
         {
-            printf("MAE: %s\n\n", (*pessoa).mae);
+            printf("MAE: %s\n\n", (*pessoa->mae));
         }
     }
 }
