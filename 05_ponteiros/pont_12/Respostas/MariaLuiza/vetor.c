@@ -32,15 +32,15 @@ void LeVetor(Vetor *vetor)
 int AplicarOperacaoVetor(Vetor *vetor, Operation op)
 {
     int resultado = 0;
-    for (int i = 0; i < vetor->tamanhoUtilizado; i++)
+    for (int i = 0; i < vetor->tamanhoUtilizado-1; i++)
     {
         if (i == 0)
         {
-            resultado = op(*(*vetor).elementos + i, *(*vetor).elementos + i + 1);
+            resultado = op(vetor->elementos[i], vetor->elementos[i+1]);
         }
         else if (i < vetor->tamanhoUtilizado - 1)
         {
-            resultado = op(resultado, *(*vetor).elementos + i + 1);
+            resultado = op(resultado, vetor->elementos[i + 1]);
         }
     }
     return resultado;
