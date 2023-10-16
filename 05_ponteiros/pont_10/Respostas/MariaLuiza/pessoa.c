@@ -67,7 +67,7 @@ void ImprimePessoa(tPessoa *pessoa)
         }
         else
         {
-            printf("PAI: %s\n", (pessoa->pai));
+            printf("PAI: %s\n", pessoa->pai->nome);
         }
         if ((*pessoa).mae == NULL)
         {
@@ -75,7 +75,7 @@ void ImprimePessoa(tPessoa *pessoa)
         }
         else
         {
-            printf("MAE: %s\n", (*pessoa->mae));
+            printf("MAE: %s\n", pessoa->mae->nome);
         }
         if ((*pessoa).irmao == NULL)
         {
@@ -83,7 +83,7 @@ void ImprimePessoa(tPessoa *pessoa)
         }
         else
         {
-            printf("IRMAO: %s\n\n", (*pessoa->irmao));
+            printf("IRMAO: %s\n\n", pessoa->irmao->nome);
         }
     }
 }
