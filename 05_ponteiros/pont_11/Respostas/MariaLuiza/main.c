@@ -57,7 +57,7 @@ int main()
             {
                 CalculatoraCallback = divisao;
                 resultado = Calcular(a, b, CalculatoraCallback);
-                printf("%.2f - %.2f = %.2f\n", a, b, resultado);
+                printf("%.2f / %.2f = %.2f\n", a, b, resultado);
             }
         }
         scanf("%*c");
