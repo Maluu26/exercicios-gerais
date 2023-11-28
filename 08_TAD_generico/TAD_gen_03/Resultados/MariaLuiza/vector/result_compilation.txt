@@ -1,0 +1,24 @@
+Resultados/MariaLuiza/vector/aluno.c: In function ‘LeAluno’:
+Resultados/MariaLuiza/vector/aluno.c:40:9: warning: implicit declaration of function ‘scanf’ [-Wimplicit-function-declaration]
+   40 |         scanf("%[^;];%c;%f", aluno->nome,&aluno->gen, &aluno->nota);
+      |         ^~~~~
+Resultados/MariaLuiza/vector/aluno.c:3:1: note: include ‘<stdio.h>’ or provide a declaration of ‘scanf’
+    2 | #include<stdlib.h>
+  +++ |+#include <stdio.h>
+    3 | struct Aluno{
+Resultados/MariaLuiza/vector/aluno.c:40:9: warning: incompatible implicit declaration of built-in function ‘scanf’ [-Wbuiltin-declaration-mismatch]
+   40 |         scanf("%[^;];%c;%f", aluno->nome,&aluno->gen, &aluno->nota);
+      |         ^~~~~
+Resultados/MariaLuiza/vector/aluno.c:40:9: note: include ‘<stdio.h>’ or provide a declaration of ‘scanf’
+cc1: fatal error: Resultados/MariaLuiza/vector/main.c: No such file or directory
+compilation terminated.
+cc1: fatal error: Resultados/MariaLuiza/vector/relatorio.c: No such file or directory
+compilation terminated.
+Resultados/MariaLuiza/vector/vector.c: In function ‘VectorGet’:
+Resultados/MariaLuiza/vector/vector.c:47:1: warning: control reaches end of non-void function [-Wreturn-type]
+   47 | }
+      | ^
+Resultados/MariaLuiza/vector/vector.c: In function ‘VectorSize’:
+Resultados/MariaLuiza/vector/vector.c:51:1: warning: control reaches end of non-void function [-Wreturn-type]
+   51 | }
+      | ^
