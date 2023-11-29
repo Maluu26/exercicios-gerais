@@ -10,10 +10,19 @@ Resultados/MariaLuiza/completo/aluno.c:40:9: warning: incompatible implicit decl
    40 |         scanf("%[^;];%c;%f", aluno->nome,&aluno->gen, &aluno->nota);
       |         ^~~~~
 Resultados/MariaLuiza/completo/aluno.c:40:9: note: include ‘<stdio.h>’ or provide a declaration of ‘scanf’
-cc1: fatal error: Resultados/MariaLuiza/completo/main.c: No such file or directory
-compilation terminated.
-cc1: fatal error: Resultados/MariaLuiza/completo/relatorio.c: No such file or directory
-compilation terminated.
+Resultados/MariaLuiza/completo/relatorio.c: In function ‘ImprimeRelatorio’:
+Resultados/MariaLuiza/completo/relatorio.c:38:50: warning: unknown conversion type character ‘\x0a’ in format [-Wformat=]
+   38 |    printf("Porcentagem de alunos aprovados: %.2f%\n",aprovados);
+      |                                                  ^~
+Resultados/MariaLuiza/completo/relatorio.c:40:28: warning: unknown conversion type character ‘\x0a’ in format [-Wformat=]
+   40 |    printf("Masculino: %.2f%\n", genM);
+      |                            ^~
+Resultados/MariaLuiza/completo/relatorio.c:41:27: warning: unknown conversion type character ‘\x0a’ in format [-Wformat=]
+   41 |    printf("Feminino: %.2f%\n", genF);
+      |                           ^~
+Resultados/MariaLuiza/completo/relatorio.c:42:24: warning: unknown conversion type character ‘\x0a’ in format [-Wformat=]
+   42 |    printf("Outro: %.2f%\n", genO);
+      |                        ^~
 Resultados/MariaLuiza/completo/vector.c: In function ‘VectorGet’:
 Resultados/MariaLuiza/completo/vector.c:47:1: warning: control reaches end of non-void function [-Wreturn-type]
    47 | }
