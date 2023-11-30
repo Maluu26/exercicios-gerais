@@ -1,0 +1,7 @@
+/usr/bin/ld: Resultados/MariaLuiza/gerenciadorpacotes/main.o: in function `main':
+main.c:(.text+0x2c): undefined reference to `CriaGerenciador'
+/usr/bin/ld: main.c:(.text+0x175): undefined reference to `AdicionaPacoteNoGerenciador'
+/usr/bin/ld: main.c:(.text+0x1bf): undefined reference to `ImprimirPacoteNoIndice'
+/usr/bin/ld: main.c:(.text+0x1d5): undefined reference to `ImprimirTodosPacotes'
+/usr/bin/ld: main.c:(.text+0x1ed): undefined reference to `DestroiGerenciador'
+collect2: error: ld returned 1 exit status

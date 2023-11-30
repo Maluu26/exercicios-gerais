@@ -1,0 +1,15 @@
+==95027== Memcheck, a memory error detector
+==95027== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==95027== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==95027== Command: Resultados/MariaLuiza/pacote/prog Resultados/MariaLuiza/pacote/Casos/3
+==95027== Parent PID: 95026
+==95027== 
+==95027== 
+==95027== HEAP SUMMARY:
+==95027==     in use at exit: 0 bytes in 0 blocks
+==95027==   total heap usage: 3 allocs, 3 frees, 8,208 bytes allocated
+==95027== 
+==95027== All heap blocks were freed -- no leaks are possible
+==95027== 
+==95027== For lists of detected and suppressed errors, rerun with: -s
+==95027== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

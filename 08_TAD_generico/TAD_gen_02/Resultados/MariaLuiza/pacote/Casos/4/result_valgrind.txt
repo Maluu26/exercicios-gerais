@@ -1,0 +1,15 @@
+==95121== Memcheck, a memory error detector
+==95121== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==95121== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==95121== Command: Resultados/MariaLuiza/pacote/prog Resultados/MariaLuiza/pacote/Casos/4
+==95121== Parent PID: 95120
+==95121== 
+==95121== 
+==95121== HEAP SUMMARY:
+==95121==     in use at exit: 0 bytes in 0 blocks
+==95121==   total heap usage: 8 allocs, 8 frees, 8,350 bytes allocated
+==95121== 
+==95121== All heap blocks were freed -- no leaks are possible
+==95121== 
+==95121== For lists of detected and suppressed errors, rerun with: -s
+==95121== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

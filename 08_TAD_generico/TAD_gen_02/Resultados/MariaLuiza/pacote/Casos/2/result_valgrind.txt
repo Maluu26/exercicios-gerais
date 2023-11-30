@@ -1,0 +1,37 @@
+==94843== Memcheck, a memory error detector
+==94843== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==94843== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==94843== Command: Resultados/MariaLuiza/pacote/prog Resultados/MariaLuiza/pacote/Casos/2
+==94843== Parent PID: 94842
+==94843== 
+==94843== Invalid write of size 1
+==94843==    at 0x48DF5E4: __vfscanf_internal (vfscanf-internal.c:2983)
+==94843==    by 0x48DC141: __isoc99_scanf (isoc99_scanf.c:30)
+==94843==    by 0x1096AD: LePacote (in /home/mlfrsantos/exercicios-gerais/08_TAD_generico/TAD_gen_02/Resultados/MariaLuiza/pacote/prog)
+==94843==    by 0x1094DB: main (in /home/mlfrsantos/exercicios-gerais/08_TAD_generico/TAD_gen_02/Resultados/MariaLuiza/pacote/prog)
+==94843==  Address 0x4aa717b is 0 bytes after a block of size 11 alloc'd
+==94843==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==94843==    by 0x1095F0: CriaPacote (in /home/mlfrsantos/exercicios-gerais/08_TAD_generico/TAD_gen_02/Resultados/MariaLuiza/pacote/prog)
+==94843==    by 0x1094CB: main (in /home/mlfrsantos/exercicios-gerais/08_TAD_generico/TAD_gen_02/Resultados/MariaLuiza/pacote/prog)
+==94843== 
+==94843== Invalid read of size 1
+==94843==    at 0x484ED24: strlen (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==94843==    by 0x48F0D30: __vfprintf_internal (vfprintf-internal.c:1517)
+==94843==    by 0x48DA79E: printf (printf.c:33)
+==94843==    by 0x10974D: ImprimePacote (in /home/mlfrsantos/exercicios-gerais/08_TAD_generico/TAD_gen_02/Resultados/MariaLuiza/pacote/prog)
+==94843==    by 0x109361: ImprimirTodosPacotes (in /home/mlfrsantos/exercicios-gerais/08_TAD_generico/TAD_gen_02/Resultados/MariaLuiza/pacote/prog)
+==94843==    by 0x10954E: main (in /home/mlfrsantos/exercicios-gerais/08_TAD_generico/TAD_gen_02/Resultados/MariaLuiza/pacote/prog)
+==94843==  Address 0x4aa717b is 0 bytes after a block of size 11 alloc'd
+==94843==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==94843==    by 0x1095F0: CriaPacote (in /home/mlfrsantos/exercicios-gerais/08_TAD_generico/TAD_gen_02/Resultados/MariaLuiza/pacote/prog)
+==94843==    by 0x1094CB: main (in /home/mlfrsantos/exercicios-gerais/08_TAD_generico/TAD_gen_02/Resultados/MariaLuiza/pacote/prog)
+==94843== 
+==94843== 
+==94843== HEAP SUMMARY:
+==94843==     in use at exit: 0 bytes in 0 blocks
+==94843==   total heap usage: 45 allocs, 45 frees, 9,921 bytes allocated
+==94843== 
+==94843== All heap blocks were freed -- no leaks are possible
+==94843== 
+==94843== For lists of detected and suppressed errors, rerun with: -s
+==94843== ERROR SUMMARY: 18 errors from 2 contexts (suppressed: 0 from 0)
